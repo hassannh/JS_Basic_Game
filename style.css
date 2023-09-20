@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+      cursor: none;
+    }
+
+    .custom-cursor {
+      position: absolute;
+      width: 72px; 
+      height: 72px;
+      background-image: url('mole-game/cursor-worm.png'); 
+      background-size: cover;
+      pointer-events: none; /* Make sure the custom cursor doesn't interfere with the content */
+  }
+    
+    .bg {
+      background-image: url('mole-game/9292995_2927.jpeg');
+      background-size: 1908px 909px;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .hole {
+      background: black;
+      border-radius: 50%;
+      overflow: visible;
+      width: 200px;
+      height: 200px;
+    }
+    
+    .hole-container {
+      width: 23%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+    
+    .mole {
+      position: relative;
+      right: 33px;
+      bottom: 32px;
+      width: 265px;
+    }
+    
+    
+    
+    .gone {
+      display: none;
+    }
+    
+    .worm {
+      width: 1660px;
+    }
+    
+    .worm-container {
+      overflow: hidden;
+      transition: width 0.5s ease-in-out;
+    }
+    
+    .worm-box {
+      width: 1660px;
+      margin-top: 36px;
+    }
+    
+    .win {
+      max-width: 100vw;
+      max-height: 100vh;
+      display: none;
+    }
+    
+    .hide {
+      display: none;
+    }
+    
+    .show {
+      display: block;
+    }
