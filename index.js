@@ -1,36 +1,91 @@
-
 const moleImages = document.querySelectorAll('.mole');
-let currentIndex = 0; 
 
+
+ 
 
 function toggleNextMole() {
   
-  let randomindex = Math.floor(Math.random(10) * 10);
+  let randomindex = Math.floor(Math.random() * moleImages.length);
 
   console.log(randomindex);
 
-  moleImages[randomindex].style.display = "none";
 
+  function hideMole() {
+    moleImages[randomindex].classList.toggle("hide");
+ }
   setTimeout(()=> {
 
 
-  moleImages[randomindex].style.display = "block";
+    moleImages[randomindex].classList.toggle("hide");
 
-  },1000)
+  },500)
+
+
+  function AddWormPart() {
+    
+  
+   
+    wormWidth.addEventListener("click", function() {
+
+      console.log("dfghjklkjhgfds");
+      
+      if (moleImages[randomindex].src === './mole-game/king-fed.png') {
+        
+        wormWidth.classList.add("addPart");
+
+        
+      }
+    });
+  }
+  
+  function updateScore() {
+    let wormWidth = document.getElementById("worm_width");
+    console.log("dhhj");
+      wormWidth.style.width += 10
+  }
+
+  
+  
+
+  
+
+
+  moleImages[randomindex].addEventListener('click', function() {
+
+    if (moleImages[randomindex].src === './mole-game/king-fed.png') {
+      
+      
+        moleImages[randomindex].src = './mole-game/king-leaving.png';
+
+    } else {
+        moleImages[randomindex].src = './mole-game/king-fed.png';
+        updateScore()
+    }
+
+});
+
+
+
+  
+
+
+
 }
 
-setInterval(toggleNextMole, 1000);
-
+setInterval(toggleNextMole, 500);
 
 
 
 const customCursor = document.querySelector('.custom-cursor');
 
-// Listen for mousemove events on the document
 document.addEventListener('mousemove', (e) => {
+
     // Update the custom cursor position to match the mouse pointer
     customCursor.style.left = `${e.clientX}px`;
     customCursor.style.top = `${e.clientY}px`;
 });
+
+
+
 
  

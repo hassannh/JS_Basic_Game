@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    cursor: url("mole-game/cursor.png"), auto;
     }
     
     body {
@@ -9,11 +10,9 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 0;
-      margin: 0;
       height: 100%;
       width: 100%;
-      cursor: none;
+      overflow: hidden;
     }
 
     .custom-cursor {
@@ -22,7 +21,7 @@
       height: 72px;
       background-image: url('mole-game/cursor-worm.png'); 
       background-size: cover;
-      pointer-events: none; /* Make sure the custom cursor doesn't interfere with the content */
+      pointer-events: none;
   }
     
     .bg {
@@ -36,6 +35,9 @@
       justify-content: center;
       align-items: center;
     }
+
+
+  
     
     .hole {
       background: black;
@@ -58,6 +60,7 @@
       right: 33px;
       bottom: 32px;
       width: 265px;
+      cursor: url('mole-game/cursor-worm.png'),autoh;
     }
     
     
@@ -68,6 +71,7 @@
     
     .worm {
       width: 1660px;
+      height: 85px;
     }
     
     .worm-container {
@@ -92,4 +96,8 @@
     
     .show {
       display: block;
+    }
+
+    .addPart{
+      width: 30%;
     }

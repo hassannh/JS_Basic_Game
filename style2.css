@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-image: url('mole-game/9292995_2927.jpeg');
+    background-size: 1920px 841px;
+      background-repeat: no-repeat;
+}
+
+.button {
+
+    
+    position: relative;
+    right: -724px;
+    bottom: -528px;
+      height: 101px;
+    width: 450px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #d45a08, #b8d60d);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+   
+}
+
+
+.button:hover {
+    background: linear-gradient(45deg, #2196F3, #4CAF50);
+}
+
+
+
+#Play{
+    background-image: url('mole-game/old-wood.jpg');
+    background-size: 300px 300px;
+}
