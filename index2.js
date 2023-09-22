@@ -9,6 +9,7 @@ function spawnMole() {
 
     const mole = document.createElement("img")
 
+
     mole.classList.add("mole")
 
     mole.src = "./mole-game/hungry.png"
@@ -29,11 +30,22 @@ function spawnMole() {
 
           console.log(Score);
 
-          Scoore += 30 
+          Scoore += 10;
           Score.style.width = Scoore + "%";
-
-
         }
+
+
+        if (Score === 100) {
+           
+            var imageElement = document.createElement("img");
+
+            imageElement.src = "./mole-game/win.png"; 
+            
+            var imageContainer = document.getElementById("finish");
+            imageContainer.appendChild(imageElement);
+        }
+
+
 
 
     })

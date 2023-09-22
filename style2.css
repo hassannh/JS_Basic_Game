@@ -17,8 +17,8 @@ body{
 
     
     position: relative;
-    right: -724px;
-    bottom: -528px;
+    right: -735px;
+    bottom: -413px;
       height: 101px;
     width: 450px;
     display: inline-block;
@@ -44,4 +44,20 @@ body{
 #Play{
     background-image: url('mole-game/old-wood.jpg');
     background-size: 300px 300px;
+}
+
+
+
+.title{
+    position: relative;
+    right: -832px;
+    bottom: -105px;
+    height: 94px;
+    width: 450px;
+}
+
+.developer{
+position: relative;
+top: -172px;
+right: -12px;
 }
