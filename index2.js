@@ -1,5 +1,7 @@
 const holes = document.querySelectorAll('.hole');
 
+let Score = document.querySelector(".worm_width");
+
 function spawnMole() {
     const holeIndex = Math.floor(Math.random() * holes.length)
 
@@ -23,12 +25,15 @@ function spawnMole() {
 
           mole.src = "./mole-game/fed.png"
 
+          console.log(Score);
+          
+          Score.style.width = 30 + "%";
+
 
         }
 
 
     })
-
 
 
   
@@ -61,15 +66,11 @@ function spawnMole() {
 }
 
 
-function updateScore() {
-    let wormWidth = document.getElementById("worm_width");
-    console.log("dhhj");
-      wormWidth.style.width += 10
-  }
+
 
 
 
 
 setInterval(spawnMole,1000);
 
-updateScore();
+
