@@ -13,36 +13,35 @@ function spawnMole() {
     mole.classList.add("mole")
 
     mole.src = "./mole-game/hungry.png"
-    
+
     const hole = holes[holeIndex]
 
     let birdState = 'hungry'
 
     hole.appendChild(mole)
 
-    mole.addEventListener('click',()=>{
+
+    mole.addEventListener('click', () => {
 
         if (birdState === 'hungry') {
 
             birdState = 'fed'
 
-          mole.src = "./mole-game/fed.png"
+            mole.src = "./mole-game/fed.png"
 
-          console.log(Score);
+            console.log(Score);
 
-          Scoore += 10;
-          Score.style.width = Scoore + "%";
+            Scoore += 10;
+            Score.style.width = Scoore + "%";
         }
 
 
-        if (Score === 100) {
-           
-            var imageElement = document.createElement("img");
+        console.log("befoooooooooooooooor");
 
-            imageElement.src = "./mole-game/win.png"; 
-            
-            var imageContainer = document.getElementById("finish");
-            imageContainer.appendChild(imageElement);
+        if (Scoore > 100) {
+
+        moole = document.querySelector("#body")
+        moole.innerHTML = "<img src='mole-game/win.png' >"
         }
 
 
@@ -51,32 +50,32 @@ function spawnMole() {
     })
 
 
-  
 
 
 
 
 
-    setTimeout(()=>{
+
+    setTimeout(() => {
         if (birdState === 'hungry') {
             birdState = 'sad'
-          mole.src = "./mole-game/sad.png"
+            mole.src = "./mole-game/sad.png"
 
         }
 
 
-    },1000)
+    }, 1000)
 
-    setTimeout(()=>{
+    setTimeout(() => {
         mole.src = "./mole-game/leaving.png"
 
-    },1500)
+    }, 1500)
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         mole.remove()
 
-    },2000)
+    }, 2000)
 
 }
 
@@ -86,6 +85,6 @@ function spawnMole() {
 
 
 
-setInterval(spawnMole,2000);
+setInterval(spawnMole, 2000);
 
 
